@@ -160,28 +160,98 @@ void MainWindow::on_pushButton_7_clicked()
 
 void MainWindow::on_pushButton_8_clicked()
 {
-    robot->moveBy(-20,0);
-    scene->addItem(robot);
-    ui->graphicsView->setScene(scene);
+    //robot->Link3->setFlag(QGraphicsItem::ItemIgnoresTransformations, true);
+
+    double rot = robot->Link2->rotation();
+    robot->Link2->setRotation(rot - 5);
+
+    //double rot2 = robot->Link3->rotation();
+    //robot->Link3->setRotation(rot2 + 5);
+
+    //robot->Link3->setFlag(QGraphicsItem::ItemIgnoresTransformations, false);
 }
 
 void MainWindow::on_pushButton_9_clicked()
 {
-    robot->moveBy(20,0);
-    scene->addItem(robot);
-    ui->graphicsView->setScene(scene);
+    //robot->Link3->setFlag(QGraphicsItem::ItemIgnoresTransformations, true);
+
+    double rot = robot->Link2->rotation();
+    robot->Link2->setRotation(rot + 5);
+
+    //double rot2 = robot->Link3->rotation();
+    //robot->Link3->setRotation(rot2 - 5);
+
+    //robot->Link3->setFlag(QGraphicsItem::ItemIgnoresTransformations, false);
 }
 
 void MainWindow::on_pushButton_11_clicked()
 {
-    robot->moveBy(0,20);
-    scene->addItem(robot);
-    ui->graphicsView->setScene(scene);
+    //robot->Link3->setFlag(QGraphicsItem::ItemIgnoresTransformations, true);
+
+    if(robot->Link1->rotation() > -90){
+        double rot = robot->Link1->rotation();
+        robot->Link1->setRotation(rot + 5);
+        //double rot2 = robot->Link2->rotation();
+        //robot->Link2->setRotation(rot2 + 10);
+    }
+    else{
+        double rot = robot->Link1->rotation();
+        robot->Link1->setRotation(rot - 5);
+        //double rot2 = robot->Link2->rotation();
+        //robot->Link2->setRotation(rot2 - 10);
+    }
+
+
+    if(robot->Link2->rotation() > -90){
+        double rot2 = robot->Link2->rotation();
+        robot->Link2->setRotation(rot2 + 10);
+    }
+    else{
+        double rot2 = robot->Link2->rotation();
+        robot->Link2->setRotation(rot2 - 10);
+    }
+
+    //robot->Link3->setFlag(QGraphicsItem::ItemIgnoresTransformations, false);
 }
 
 void MainWindow::on_pushButton_10_clicked()
 {
-    robot->moveBy(0,-20);
-    scene->addItem(robot);
-    ui->graphicsView->setScene(scene);
+    //robot->Link3->setFlag(QGraphicsItem::ItemIgnoresTransformations, true);
+
+    if(robot->Link1->rotation() < -90){
+        double rot = robot->Link1->rotation();
+        robot->Link1->setRotation(rot + 5);
+        //double rot2 = robot->Link2->rotation();
+        //robot->Link2->setRotation(rot2 + 10);
+    }
+    else if(robot->Link1->rotation() == -90)
+        ;
+    else{
+        double rot = robot->Link1->rotation();
+        robot->Link1->setRotation(rot - 5);
+        //double rot2 = robot->Link2->rotation();
+        //robot->Link2->setRotation(rot2 - 10);
+    }
+
+
+    if(robot->Link2->rotation() < -90){
+        double rot2 = robot->Link2->rotation();
+        robot->Link2->setRotation(rot2 + 10);
+    }
+    else{
+        double rot2 = robot->Link2->rotation();
+        robot->Link2->setRotation(rot2 - 10);
+    }
+
+    //robot->Link3->setFlag(QGraphicsItem::ItemIgnoresTransformations, false);
+}
+void MainWindow::on_pushButton_12_clicked()
+{
+   robot->Link3->setFlag(QGraphicsItem::ItemIgnoresTransformations, true);
+   robot->Link3->setRotation(-90);
+}
+void MainWindow::on_pushButton_13_clicked()
+{
+   robot->Link3->setFlag(QGraphicsItem::ItemIgnoresTransformations, false);
+   robot->Link3->setRotation(90);
 }

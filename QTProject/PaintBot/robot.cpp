@@ -89,6 +89,7 @@ Robot::Robot(QGraphicsItem *parent)
     Link2->setRotation(0);
     Link3->setPos(90,0);
     Link3->setRotation(0);
+    //Link2->setFlag(QGraphicsItem::ItemIgnoresTransformations, true);
    // Link4->setPos(40,0);
    // Link4->setRotation(0);
 
