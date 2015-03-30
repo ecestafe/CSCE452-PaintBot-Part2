@@ -9,7 +9,9 @@ QT_BEGIN_NAMESPACE
 class QGraphicsSceneMouseEvent;
 class QParallelAnimationGroup;
 QT_END_NAMESPACE
-
+#define LINK1 160
+#define LINK2 110
+#define LINK3 60
 
 class RobotPart : public QGraphicsObject
 {
@@ -51,6 +53,8 @@ class Robot : public RobotPart
 public:
     Robot(QGraphicsItem *parent = 0);
     QGraphicsObject *torsoItem;
+    QGraphicsObject *torsoItem2;
+    QGraphicsObject *torsoItem3;
     QGraphicsObject *Link1;
     QGraphicsObject *Link2;
     QGraphicsObject *Link3;

@@ -50,6 +50,8 @@ public:
     QPushButton *pushButton_11;
     QPushButton *pushButton_9;
     QPushButton *pushButton_8;
+    QPushButton *pushButton_12;
+    QPushButton *pushButton_13;
     QMenuBar *menuBar;
     QMenu *menuPaintBot;
     QToolBar *mainToolBar;
@@ -120,6 +122,12 @@ public:
         pushButton_8 = new QPushButton(groupBox_2);
         pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
         pushButton_8->setGeometry(QRect(50, 20, 75, 23));
+        pushButton_12 = new QPushButton(centralWidget);
+        pushButton_12->setObjectName(QStringLiteral("pushButton_12"));
+        pushButton_12->setGeometry(QRect(930, 470, 151, 23));
+        pushButton_13 = new QPushButton(centralWidget);
+        pushButton_13->setObjectName(QStringLiteral("pushButton_13"));
+        pushButton_13->setGeometry(QRect(930, 510, 151, 23));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -162,6 +170,8 @@ public:
         pushButton_11->setText(QApplication::translate("MainWindow", "- Y", 0));
         pushButton_9->setText(QApplication::translate("MainWindow", "+ X", 0));
         pushButton_8->setText(QApplication::translate("MainWindow", "- X", 0));
+        pushButton_12->setText(QApplication::translate("MainWindow", "Enable World Control Mode", 0));
+        pushButton_13->setText(QApplication::translate("MainWindow", "Disable World Control Mode", 0));
         menuPaintBot->setTitle(QApplication::translate("MainWindow", "PaintBot", 0));
     } // retranslateUi
 
